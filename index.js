@@ -96,7 +96,7 @@ export function create(options) {
       throw new Error(res.data.error);
     }
 
-    return [res.data, res.statusCode, res.header];
+    return {data: res.data, statusCode: res.statusCode, header: res.header};
   }
 
   methods.forEach((method) => {
